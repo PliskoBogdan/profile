@@ -3,12 +3,17 @@ import { resolve } from "path";
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/main.scss'],
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
+  },
+  mdi: {
+    cache: true,
+    componentName: 'VIcon',
+    defaultSize: '1em'
   },
   alias: {
     '@': resolve(__dirname, '/')

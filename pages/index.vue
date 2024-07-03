@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="main-container">
         <div class="main-wrapper">
 
             <!-- <section class="bg-green-default">section</section> -->
@@ -10,10 +10,8 @@
 </template>
 
 <style lang="scss" scoped>
-.container  {
-margin: 0 auto;
-width: 50%;
-padding: 10rem 1rem;
+.main-container  {
+    width: 1300px;
 }
 .main-wrapper {
     display: grid;

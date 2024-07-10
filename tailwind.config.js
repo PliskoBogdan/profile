@@ -19,6 +19,7 @@ export default {
         },
         grey: {
           100: '#4f4f4f',
+          150: '#272727',
           200: '#1E1E1E',
           300: '#313131'
         },
@@ -26,6 +27,7 @@ export default {
           500: '#212123'
         },
         yellow: {
+          200: '#fada78',
           300: '#cdad4a'
         },
         white: {

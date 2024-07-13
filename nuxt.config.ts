@@ -2,8 +2,11 @@
 import { resolve } from "path";
 
 export default defineNuxtConfig({
+  app: {
+    pageTransition: { name: "page", mode: "out-in"}
+  },
   devtools: { enabled: true },
-  css: ['~/assets/css/main.scss'],
+  css: ["~/assets/css/main.scss"],
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -12,24 +15,27 @@ export default defineNuxtConfig({
   },
   mdi: {
     cache: true,
-    componentName: 'VIcon',
-    defaultSize: '1em'
+    componentName: "VIcon",
+    defaultSize: "1em",
   },
   alias: {
-    '@': resolve(__dirname, '/')
+    "@": resolve(__dirname, "/"),
   },
   modules: [
-    '@nuxt/image',
-    'nuxt-mdi',
-    '@nuxtjs/tailwindcss',
-    ['@nuxtjs/google-fonts', {
-      families: {
-        Lato: {
-          wght: [300, 400, 700],
-          ital: [300]
+    "@nuxt/image",
+    "nuxt-mdi",
+    "@nuxtjs/tailwindcss",
+    [
+      "@nuxtjs/google-fonts",
+      {
+        families: {
+          Lato: {
+            wght: [300, 400, 700],
+            ital: [300],
+          },
         },
-      }
-  }],
+      },
+    ],
   ],
-  compatibilityDate: '2024-07-03',
-})
+  compatibilityDate: "2024-07-03",
+});

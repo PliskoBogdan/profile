@@ -36,11 +36,15 @@ const onPageChange = (item: NavItem): void => {
 
     &__item {
       font-size: 16px;
-      color: theme("colors.white.text");
+      color: theme("colors.grey.50");
       transition: ease-in .4s;
-      &:hover {
-        color: theme("colors.yellow.200");
+      font-weight: 500;
+      &:hover:not(.router-link-exact-active) {
+        color: #988b62;
       }
     }
+  }
+  .router-link-exact-active {
+    color: theme("colors.yellow.200");
   }
 </style>

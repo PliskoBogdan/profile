@@ -5,10 +5,20 @@
         <Profile />
 
         <aside class="bg-grey-200">
+          <div class="page-name">
+            <h3 class="page-name__value">
+              {{ $firstCapitalize(currPageName) }}
+            </h3>
+            <div class="page-name__bottom-line"></div>
+          </div>
           <div class="navbar-wrapper">
             <MNavBar :items="navbarItems" @change="onNavChange" />
           </div>
-          <slot />
+          <div class="aside-content-wrapper">
+
+            <slot />
+
+          </div>
         </aside>
       </div>
     </div>
@@ -16,38 +26,53 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import { NavItem } from "@/components/types/MNavBar";
 
 const navbarItems: NavItem[] = [
   {
     id: 1,
     title: "About",
-    to: "about",
+    to: "/",
+    routeName: "index"
   },
   {
     id: 2,
     title: "Resume",
-    to: "resume",
+    to: "/resume",
+    routeName: "resume"
   },
   {
     id: 3,
     title: "Portfolio",
-    to: "portfolio",
+    to: "/portfolio",
+    routeName: "resume"
   },
   {
     id: 4,
     title: "Contact",
-    to: "contact",
+    to: "/contact",
+    routeName: "resume"
   },
 ];
 
+const nameByRouteName: Record<string, string> = {
+  index: "About me",
+  resume: "Resume",
+  portfolio: 'Portfolio',
+  contact: 'Contact me'
+};
+
+const route = useRoute();
+const { $firstCapitalize } = useNuxtApp();
+
 const activeLink = ref<string>(navbarItems[0].to);
 
-const onNavChange = (item: NavItem) => {
+const onNavChange = (item: NavItem): void => {
   activeLink.value = item.to;
-  console.log(activeLink.value);
 };
+
+const currPageName = computed<string>(() => nameByRouteName[route.name]);
 </script>
 
 <style lang="scss">
@@ -74,6 +99,24 @@ aside {
 
 .navbar-wrapper {
   position: absolute;
+  top: 0;
   right: 0;
+}
+.aside-content-wrapper {
+  padding: 0 1rem;
+}
+.page-name {
+  padding: 1rem;
+  &__value {
+    font-size: 24px;
+    color: theme("colors.white.text");
+    font-weight: 700;
+  }
+  &__bottom-line {
+    width: 30px;
+    height: 3px;
+    background: theme("colors.yellow.200");
+    margin-top: 0.3rem;
+  }
 }
 </style>

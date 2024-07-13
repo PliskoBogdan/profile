@@ -73,6 +73,7 @@ const contacts: Contact[] = [
   padding: 0.7rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   gap: 0.3rem;
 
   &__name {

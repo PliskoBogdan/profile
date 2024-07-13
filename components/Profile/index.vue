@@ -114,12 +114,12 @@ const contacts: Contact[] = [
     gap: 5px;
   }
   &__link {
-    ::v-deep path {
+    :deep(path) {
       fill: theme('colors.yellow.300') !important
     }
 
     &:hover {
-      ::v-deep path {
+      :deep(path) {
         transition: .5s;
         fill: theme('colors.yellow.200') !important
       }

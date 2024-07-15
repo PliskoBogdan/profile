@@ -103,14 +103,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
-    padding: 0.4rem 0rem 1.3rem 0rem;
+    padding: 0.4rem 0rem 0rem 0rem;
   }
   &__card {
     display: flex;
     gap: 0.5rem;
-  }
-  &__card-description {
-    // padding-left: 0.5rem;
   }
   &__card-title {
     color: theme("colors.white.text");

@@ -1,5 +1,6 @@
 <template>
   <div class="contact">
+    <MMaps class="contact__maps" />
     <h2 class="contact__form-title">Contact Form</h2>
 
     <div class="contact__form">
@@ -59,6 +60,10 @@ const isFormDataValid = computed<boolean>(
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+
+  &__maps {
+    height: 30vh !important;
+  }
 
   &__form-title {
     font-size: 20px;

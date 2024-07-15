@@ -101,7 +101,7 @@ aside {
   right: 0;
 }
 .aside-content-wrapper {
-  padding: 0 1rem;
+  padding: 0rem 1rem 1.3rem 1rem;
 }
 .page-name {
   padding: 1rem;

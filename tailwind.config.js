@@ -18,6 +18,7 @@ export default {
           dark: "#047857", // Тёмно-зелёный
         },
         grey: {
+          40: '#525253',
           50: '#a6a6a6',
           100: '#4f4f4f',
           150: '#272727',
@@ -36,6 +37,9 @@ export default {
           default: "#ffffff", // Белый для контраста
           text: '#dedede'
         },
+        red: {
+          100: '#bf2b2b'
+        }
       },
     },
   },

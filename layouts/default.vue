@@ -15,9 +15,7 @@
             <MNavBar :items="navbarItems" @change="onNavChange" />
           </div>
           <div class="aside-content-wrapper">
-
             <slot />
-
           </div>
         </aside>
       </div>

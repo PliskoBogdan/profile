@@ -29,13 +29,13 @@
         href="https://www.linkedin.com/in/bohdan-antoshka-272a681b7/?originalSubdomain=ua"
         target="_blank"
         class="profile__link"
-        ><VIcon icon="mdiLinkedin"
+        ><MIcon icon="mdiLinkedin"
       /></a>
       <a
         href="https://github.com/PliskoBogdan"
         target="_blank"
         class="profile__link"
-        ><VIcon icon="mdiGithub"
+        ><MIcon icon="mdiGithub"
       /></a>
     </div>
   </section>

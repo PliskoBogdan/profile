@@ -15,7 +15,7 @@ export default defineNuxtConfig({
   },
   mdi: {
     cache: true,
-    componentName: "VIcon",
+    componentName: "MIcon",
     defaultSize: "1em",
   },
   alias: {

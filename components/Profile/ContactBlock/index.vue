@@ -1,7 +1,7 @@
 <template>
   <div class="profile-contact-block">
     <div class="profile-contact-block__icon">
-      <VIcon :icon="props.icon" />
+      <MIcon :icon="props.icon" />
     </div>
     <div class="profile-contact-block__content">
       <span class="profile-contact-block__title">{{ props.title }}</span>

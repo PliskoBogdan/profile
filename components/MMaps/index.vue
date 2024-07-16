@@ -21,8 +21,6 @@
 
       const center = { lat: 50.005033, lng: 36.232471 };
 
-      console.log('sdsdasdsa', config);
-
       return { center, apiKey };
     },
   };

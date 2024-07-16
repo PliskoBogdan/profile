@@ -1,10 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { resolve } from "path";
 
-import dotenv from 'dotenv'
-
-dotenv.config()
-
 export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in"}

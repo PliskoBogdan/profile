@@ -12,7 +12,7 @@
     </div>
     <h2 class="profile__name">Bohdan Plisko</h2>
     <div class="profile__role">
-      <h3 class="profile__role-title">Front-end developer</h3>
+      <h3 class="profile__role-title">Full-Stack Developer</h3>
     </div>
     <div class="profile__separator"></div>
     <div class="profile__contacts">
@@ -59,7 +59,7 @@ const contacts: Contact[] = [
   { title: "Phone", subtitle: "+38 (099) 915 1114", icon: "mdiPhone", id: 2 },
   {
     title: "Birthday",
-    subtitle: "19.08.2001",
+    subtitle: `19.08.2001 (${new Date().getFullYear() - 2001} Y.O)`,
     icon: "mdiCalendarBlankOutline",
     id: 3,
   },

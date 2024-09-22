@@ -18,7 +18,7 @@
       <MTextarea
         v-model="formData.userMessage"
         class="contact__form-message"
-        label="Your message"
+        placeholder="Your message"
       />
       <div class="contact__form-submit">
         <Mbutton :disabled="!isFormDataValid">

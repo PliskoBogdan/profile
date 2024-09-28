@@ -40,12 +40,12 @@ const navbarItems: NavItem[] = [
     to: "/resume",
     routeName: "resume"
   },
-  {
-    id: 3,
-    title: "Portfolio",
-    to: "/portfolio",
-    routeName: "resume"
-  },
+  // {
+  //   id: 3,
+  //   title: "Portfolio",
+  //   to: "/portfolio",
+  //   routeName: "resume"
+  // },
   {
     id: 4,
     title: "Contact",

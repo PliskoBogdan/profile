@@ -1,6 +1,5 @@
 <template>
   <div class="contact">
-    <MMaps class="contact__maps" />
     <h2 class="contact__form-title">Contact Form</h2>
 
     <div class="contact__form">

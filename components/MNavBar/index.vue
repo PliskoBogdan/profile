@@ -34,6 +34,10 @@ const onPageChange = (item: NavItem): void => {
     background: theme("colors.grey.150");
     border-radius: 0px var(--border-main) 0px var(--border-main);
 
+    @media (max-width: $mobile) {
+     justify-content: center;
+    }
+
     &__item {
       font-size: 16px;
       color: theme("colors.grey.50");

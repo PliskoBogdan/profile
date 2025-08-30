@@ -28,8 +28,7 @@
         <div class="about-me__card-description">
           <h2 class="about-me__card-title">Web Development</h2>
           <p class="about-me__card-subtitle">
-            Development of web-applications of any level of complexity with
-            maximum performance and cross-platform functionality
+            High-quality development of web products of any complexity using years of experience and cutting-edge technologies to solve problems of any level of complexity, with the possibility of maximum support and convenience for customers.
           </p>
         </div>
       </MCard>
@@ -41,10 +40,10 @@
           height="40"
         />
         <div class="about-me__card-description">
-          <h2 class="about-me__card-title">Mentoring / Coaching</h2>
+          <h2 class="about-me__card-title">CEO optimization</h2>
           <p class="about-me__card-subtitle">
-            I share my vast knowledge with developers and businesses <br />so
-            that everyone can get the maximum profit in the right sphere
+            Problems with crawling SEO optimization for your products? Maybe your website has poor ratings in Page Speed Insights?
+            We will quickly and efficiently fix SEO errors in your web applications, reliably and using all best practices.
           </p>
         </div>
       </MCard>
@@ -56,10 +55,10 @@
           height="40"
         />
         <div class="about-me__card-description">
-          <h2 class="about-me__card-title">Web Design</h2>
+          <h2 class="about-me__card-title">WCAG support</h2>
           <p class="about-me__card-subtitle">
-            Modern and convenient design both from scratch and in the process of
-            finalizing web-applications without ready templates
+            Does your company operate in the European/American market and want to avoid legal issues? 
+            Well, then you should keep web accessibility in mind, which is where I can help. Website optimization for tabs, screen readers, and visual impairments, with care and convenience for users.
           </p>
         </div>
       </MCard>
@@ -104,6 +103,10 @@
     grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
     padding: 0.4rem 0rem 0rem 0rem;
+
+    @media (max-width: $mobile) {
+      grid-template-columns: 1fr;
+    }
   }
   &__card {
     display: flex;

@@ -21,6 +21,17 @@ export default defineNuxtConfig({
   alias: {
     "@": resolve(__dirname, "/"),
   },
+   vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `
+            @import "~/assets/css/vars.scss";
+          `
+        }
+      }
+    }
+  },
   modules: [
     "@nuxt/image",
     "nuxt-mdi",

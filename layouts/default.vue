@@ -74,12 +74,23 @@ const currPageName = computed<string>(() => nameByRouteName[route.name]);
 </script>
 
 <style lang="scss">
+aside {
+   @media (max-width: $mobile) {
+     display: flex;
+     flex-direction: column;
+     gap: 24px;
+   }
+}
 .default-layout {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background: theme("colors.mainBg");
+
+  @media (max-width: $mobile) {
+    height: auto;
+  }
 }
 
 .main-container {
@@ -89,6 +100,10 @@ const currPageName = computed<string>(() => nameByRouteName[route.name]);
   display: grid;
   grid-template-columns: 3fr 9fr;
   gap: 1rem;
+
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
+  }
 }
 aside {
   border-radius: var(--border-main);
@@ -99,12 +114,25 @@ aside {
   position: absolute;
   top: 0;
   right: 0;
+
+  @media (max-width: $mobile) {
+      position: static;
+  }
 }
 .aside-content-wrapper {
   padding: 0rem 1rem 1.3rem 1rem;
 }
 .page-name {
   padding: 1rem;
+
+  @media (max-width: $mobile) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+  }
+
   &__value {
     font-size: 24px;
     color: theme("colors.white.text");

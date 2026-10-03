@@ -46,6 +46,42 @@
 <script lang="ts" setup>
 const experienceList = [
   {
+    id: 12,
+    title: "Full-Stack developer, “NDA”",
+    date: "Feb 2025 - current",
+
+    description: 'NDA',
+    // description: `
+    //        Working as a developer on several products provided by the company to its 
+    //        clients in the field of internet consultancy, working side by side with colleagues in the 
+    //        rapid response team. The team’s main areas of responsibility are responding swiftly to vulnerabilities, 
+    //        implementing urgent business solutions promptly, and ensuring transparency for the business. `,
+    role: 'NDA',
+    stack: `- Javascript, C#, .net framework, Microsoft Dynamics <br/>
+                    - jquery, SOAP, XML <br/>
+                    - MYSQL, mongodb <br/>
+    `,
+  //   role: `
+  //   - Core refactoring, perfomance optimisation, new features development<br/>
+  //   - Documentation creation<br/>
+  //   - Developing tools to address the company’s internal challenges<br/>
+  // `,
+  },
+  {
+    id: 11,
+    title: "Front-end Developer, “Makeup UA”",
+    date: "Jul 2024 - Dec 2025",
+    description: `
+           I worked as a developer on the main legacy domain for cosmetics sales, and also
+worked on the restock of this store on React`,
+    stack: `- Javascript, TypeSrcript, HTML5, SCSS, PHP <br/>
+                    - React.js, jquery, Jest, puppeteer, gulp <br/>`,
+    role: `- WCAG, SEO, GTM, Rendering and JS optimization.<br/>
+    - Rewriting  the old project in React (restack)
+    - Implement new design system
+  `,
+  },
+  {
     id: 1,
     title: "Front-end Tech Lead, “AlverseAI”",
     date: "Feb 2023 - Mar 2024",

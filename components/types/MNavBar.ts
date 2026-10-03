@@ -3,4 +3,5 @@ export interface NavItem {
   title: string;
   to: string;
   routeName: string;
+  mobileOnly?: boolean;
 }

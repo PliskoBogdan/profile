@@ -2,7 +2,7 @@
   <div class="default-layout">
     <div class="main-container">
       <div class="main-wrapper">
-        <Profile />
+        <Profile class="desktop-only" />
 
         <aside class="bg-grey-200">
           <div class="page-name">
@@ -28,6 +28,13 @@ import { ref, computed } from "vue";
 import { NavItem } from "@/components/types/MNavBar";
 
 const navbarItems: NavItem[] = [
+  {
+    id: 0,
+    title: "Profile",
+    to: "/profile",
+    routeName: "profile",
+    mobileOnly: true,
+  },
   {
     id: 1,
     title: "About",
@@ -55,6 +62,7 @@ const navbarItems: NavItem[] = [
 ];
 
 const nameByRouteName: Record<string, string> = {
+  profile: "Profile",
   index: "About me",
   resume: "Resume",
   portfolio: 'Portfolio',
@@ -63,6 +71,20 @@ const nameByRouteName: Record<string, string> = {
 
 const route = useRoute();
 const { $firstCapitalize } = useNuxtApp();
+
+const router = useRouter();
+
+// On mobile the Profile card is a separate first tab (the sidebar is hidden),
+// and it is the default landing page; on desktop /profile makes no sense.
+onMounted(() => {
+  const mq = window.matchMedia("(max-width: 744px)");
+  if (mq.matches && route.path === "/") router.replace("/profile");
+  else if (!mq.matches && route.path === "/profile") router.replace("/");
+
+  mq.addEventListener("change", (e) => {
+    if (!e.matches && route.path === "/profile") router.replace("/");
+  });
+});
 
 const activeLink = ref<string>(navbarItems[0].to);
 
@@ -81,6 +103,11 @@ aside {
      gap: 24px;
    }
 }
+.desktop-only {
+  @media (max-width: $mobile) {
+    display: none !important;
+  }
+}
 .default-layout {
   display: flex;
   justify-content: center;
@@ -90,11 +117,19 @@ aside {
 
   @media (max-width: $mobile) {
     height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    align-items: stretch;
   }
 }
 
 .main-container {
   width: 1300px;
+
+  @media (max-width: $mobile) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .main-wrapper {
   display: grid;
@@ -103,6 +138,8 @@ aside {
 
   @media (max-width: $mobile) {
     grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    flex: 1;
   }
 }
 aside {

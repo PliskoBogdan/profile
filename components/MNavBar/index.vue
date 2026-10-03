@@ -3,6 +3,7 @@
     <NuxtLink
       v-for="item in props.items"
       class="m-navbar__item"
+      :class="{ 'm-navbar__item--mobile-only': item.mobileOnly }"
       :key="item.id"
       :to="item.to"
       @click="onPageChange(item)"
@@ -43,6 +44,14 @@ const onPageChange = (item: NavItem): void => {
       color: theme("colors.grey.50");
       transition: ease-in .4s;
       font-weight: 500;
+
+      &--mobile-only {
+        display: none;
+
+        @media (max-width: $mobile) {
+          display: inline;
+        }
+      }
       &:hover:not(.router-link-exact-active) {
         color: #988b62;
       }

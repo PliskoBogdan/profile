@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="resume">
     <div class="block-header">
       <div class="block-header__head">
         <svg
@@ -176,6 +176,11 @@ Agile.`,
 </script>
 
 <style lang="scss" scoped>
+.resume {
+  display: flex;
+  flex-direction: column;
+}
+
 .block-header {
   display: flex;
   align-items: center;
@@ -221,6 +226,14 @@ Agile.`,
   gap: 15px;
   overflow-y: scroll;
   max-height: 350px;
+
+  @media (max-width: $mobile) {
+    // fill the free height of the screen; long content scrolls inside
+    max-height: none;
+    flex: 1 1 350px;
+    min-height: 350px;
+    contain: size;
+  }
 
   &__item-line {
     position: absolute;

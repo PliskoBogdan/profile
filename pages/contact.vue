@@ -60,6 +60,10 @@ const isFormDataValid = computed<boolean>(
   flex-direction: column;
   gap: 0.8rem;
 
+  @media (max-width: $mobile) {
+    justify-content: center;
+  }
+
   &__maps {
     height: 30vh !important;
   }

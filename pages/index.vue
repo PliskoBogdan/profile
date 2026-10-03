@@ -50,7 +50,9 @@
           />
           <div class="about-me__card-description">
             <h2 class="about-me__card-title">{{ item.title }}</h2>
-            <p class="about-me__card-subtitle">{{ item.text }}</p>
+            <p class="about-me__card-subtitle">
+              <span class="about-me__card-text">{{ item.text }}</span>
+            </p>
           </div>
         </MCard>
       </div>
@@ -308,6 +310,8 @@ onBeforeUnmount(() => {
 
     @media (max-width: $mobile) {
       flex-basis: 100%;
+      flex-direction: column;
+      align-items: center;
     }
   }
   &__card-description {
@@ -316,9 +320,24 @@ onBeforeUnmount(() => {
     min-height: 0;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: $mobile) {
+      align-self: stretch;
+    }
+  }
+  &__card-text {
+    // vertical centering that still lets long text scroll from its top
+    @media (max-width: $mobile) {
+      margin-block: auto;
+      text-align: center;
+    }
   }
   &__card-title {
     padding-bottom: 0.4rem;
+
+    @media (max-width: $mobile) {
+      text-align: center;
+    }
     color: theme("colors.white.text");
     font-size: 16px;
     font-weight: 600;
@@ -332,6 +351,11 @@ onBeforeUnmount(() => {
     padding-right: 0.6rem;
     scrollbar-width: thin;
     scrollbar-color: theme("colors.yellow.300") theme("colors.black.500");
+
+    @media (max-width: $mobile) {
+      display: flex;
+      flex-direction: column;
+    }
 
     &::-webkit-scrollbar {
       width: 6px;

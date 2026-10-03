@@ -108,6 +108,8 @@ aside {
 aside {
   border-radius: var(--border-main);
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar-wrapper {
@@ -121,6 +123,15 @@ aside {
 }
 .aside-content-wrapper {
   padding: 0rem 1rem 1.3rem 1rem;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+
+  > * {
+    flex: 1;
+    min-height: 0;
+  }
 }
 .page-name {
   padding: 1rem;

@@ -47,12 +47,12 @@ const navbarItems: NavItem[] = [
     to: "/resume",
     routeName: "resume"
   },
-  // {
-  //   id: 3,
-  //   title: "Portfolio",
-  //   to: "/portfolio",
-  //   routeName: "resume"
-  // },
+  {
+    id: 3,
+    title: "Projects",
+    to: "/projects",
+    routeName: "projects"
+  },
   {
     id: 4,
     title: "Contact",
@@ -66,6 +66,7 @@ const nameByRouteName: Record<string, string> = {
   index: "About me",
   resume: "Resume",
   portfolio: 'Portfolio',
+  projects: 'Projects',
   contact: 'Contact me'
 };
 
